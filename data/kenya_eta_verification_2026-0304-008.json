@@ -1,0 +1,67 @@
+{
+  "bounty_id": "bounty-2026-0304-008",
+  "issue": 3,
+  "destination": "KE",
+  "scope": "routes * -> KE",
+  "verified_date": "2026-10-05",
+  "record_type": "destination_verification",
+  "applies_to": "Foreign nationals travelling to Kenya. This file does not rewrite passport-requirements/*.json; maintainers should apply route_defaults when updating those routes.",
+  "sources": [
+    {
+      "url": "https://etakenya.go.ke/general-information",
+      "accessed": "2026-10-05",
+      "publisher": "Government of Kenya / eTA portal"
+    },
+    {
+      "url": "https://etakenya.go.ke/faqs",
+      "accessed": "2026-10-05",
+      "publisher": "Government of Kenya / eTA portal"
+    },
+    {
+      "url": "https://etakenya.go.ke/eligibility",
+      "accessed": "2026-10-05",
+      "publisher": "Government of Kenya / eTA portal"
+    }
+  ],
+  "standard_eta": {
+    "required": true,
+    "fee_usd": 30,
+    "fee_note": "Standard eTA fee is USD 30. Bank or card surcharges, if any, are extra and are not part of the government fee.",
+    "processing_time": "3 days",
+    "processing_note": "Portal guidance is to apply at least 3 days before travel. Approval is sent by email. This is not an instant issuance product.",
+    "validity": "90 days from the date of issue, single entry, stay of up to 90 days",
+    "application_url": "https://etakenya.go.ke/",
+    "application_note": "Use only the official portal above. Third-party sites that charge a handling fee on top of the USD 30 are not the government channel."
+  },
+  "exemptions": {
+    "note": "Taken from the official eligibility page as published on the access date, including the categories added in the 2025 rule changes. Re-check https://etakenya.go.ke/eligibility before changing a route or before travel. This record does not reproduce gazette text.",
+    "east_african_partner_states": ["BI", "CD", "RW", "SS", "TZ", "UG"],
+    "east_african_note": "Citizens of these East African Partner States are exempt from the eTA. Travel on a national ID, where the EAC regime allows it, is a separate rule from the eTA and should stay on the passport/ID privilege record rather than be folded into the fee.",
+    "not_listed_here": "Somalia (SO) is an EAC member but is not recorded as eTA-exempt in this claim. Add SO only after the eligibility page names it.",
+    "additional_exempt_categories": [
+      "Kenya permanent residents and holders of a valid Kenya work permit or pass",
+      "Holders of a valid Kenya re-entry pass",
+      "Transit passengers who remain airside and do not leave the airport",
+      "Airline or ship crew on duty and listed on the manifest",
+      "Private-aircraft crew on duty passing through Kenya",
+      "Holders of diplomatic or official passports travelling on official duty (by arrangement, not a blanket waiver)",
+      "Accompanied children under 16 years of age"
+    ]
+  },
+  "route_defaults": {
+    "destination": "KE",
+    "eta_required_default": true,
+    "visa_policy_default": "eVisa",
+    "fee_usd_default": 30,
+    "processing_default": "3 days",
+    "max_stay_default": "90 days",
+    "overrides": {
+      "BI_KE": {"eta_required": false, "reason": "EAC Partner State exemption"},
+      "CD_KE": {"eta_required": false, "reason": "EAC Partner State exemption"},
+      "RW_KE": {"eta_required": false, "reason": "EAC Partner State exemption"},
+      "SS_KE": {"eta_required": false, "reason": "EAC Partner State exemption"},
+      "TZ_KE": {"eta_required": false, "reason": "EAC Partner State exemption"},
+      "UG_KE": {"eta_required": false, "reason": "EAC Partner State exemption"}
+    }
+  }
+}
